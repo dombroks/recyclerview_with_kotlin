@@ -12,12 +12,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        recyclerview.adapter=Adapter(createMockups(50))
+        recyclerview.adapter=Adapter(createDummyData(50))
         recyclerview.setHasFixedSize(true)
         recyclerview.layoutManager=LinearLayoutManager(this)
 
     }
-    private fun createMockups(size : Int) : List<item>{
+    private fun createDummyData(size : Int) : List<item>{
         val items = ArrayList<item>()
         for (i in 0..size){
             val mItem = item("Item number $i","description of item number $i")
